@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet " href="{% static 'myglobal.css' %}">
+<body>
+  <table border="1">
+<tr>
+  <th></th>
+  <th>Firstname</th>
+  <th>Lastname</th>
+  <th>Joined_date</th>
+</tr>
+{% for x in mymembers %}
+<tr>
+  <!-- <td>{{ x }}</td> -->
+  <td>{{ x.id}}</td>
+  <td>{{x.firstname}}</td>
+  <td>{{x.lastname}}</td>
+  <td>{{x.joined_date}}</td>
+</tr>
+{% endfor %}
+  </table>
+    <!-- <h1>Hello</h1>
+    <p>This page includes the footer in the template</p>
+    {% include 'mymenu.html' with me='Brian'  sponsor='Emobilis'%} -->
+    <!-- <ul>
+        {%for x in mymembers%}
+        <li>{{x.firstname}}</li>
+        {%endfor%}
+    </ul> -->
+    <!-- {%with firstname="Tobias Onyango"%}
+    <h1>Hello {{firstname}}, how are you sir?</h1>
+    {% endwith %}
+     <h1>hello {{firstname}} how are you</h1> -->
+    <!-- {%for x in fruits%}
+    <h>{{ x }}</h1>
+    {% endfor %} -->
+    <!-- <p>In views.py you can see what the fruits variable look like</p> --> 
+     <!-- {% if greeting == 1 %}
+     
+        <h1>Hello Kenya</h1>
+     
+     {%elif greeting == 2%}
+        <h1>Welcome</h1>
+        {% else %}
+        <h1>Goodbye</h1>
+    
+     {%endif%} -->
+     <!-- {% for x in cars%}
+     <h1>{{x.brand}}</h1>
+     <p>{{x.model}}</p>
+     <p>{{x.year}}</p>
+     {%endfor%} -->
+     <!-- {%for x in mymembers %}
+     <h1>{{x.id}}</h1>
+     <p>
+        {{x.firstname}}
+        {{x.lastname}}
+     </p> -->
+     <!-- <ul>
+        {% for x in myobject %}
+          <li>{{ x.firstname }}</li>
+        {% empty %}
+          <li>No members</li>
+        {% endfor %}
+      </ul>  -->
+     <!-- {%endfor%} -->
+     <!-- <ul>
+        {% for x in fruits %}
+          <li
+            {% if forloop.last %}
+              style='background-color:lightblue;'
+            {% endif %}
+          >{{ x }}</li>
+        {% endfor %}
+      </ul>  -->
+</body>
+</html>
